@@ -94,7 +94,6 @@ This project is open source and available under the [MIT License](LICENSE).
 **Ved Patel**
 
 - GitHub: [@Vedpatel2708](https://github.com/Vedpatel2708)
-- Portfolio: [Your Portfolio URL]
 
 ## 🙏 Acknowledgments
 
