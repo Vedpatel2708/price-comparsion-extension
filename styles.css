@@ -1,0 +1,298 @@
+/* Styles for the price comparison widget */
+
+#price-comparison-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 380px;
+    max-height: 600px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    z-index: 2147483647 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    overflow: hidden;
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .pcw-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pcw-title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .pcw-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 24px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    line-height: 1;
+  }
+  
+  .pcw-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .pcw-content {
+    padding: 20px;
+    max-height: 520px;
+    overflow-y: auto;
+  }
+  
+  .pcw-loading {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 16px;
+    border: 4px solid #f3f4f6;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .pcw-current-price {
+    background: #f9fafb;
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .pcw-label {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  .pcw-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+  }
+  
+  .pcw-savings {
+    background: #dcfce7;
+    color: #166534;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .pcw-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .pcw-price-item {
+    background: #f9fafb;
+    padding: 14px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+    gap: 8px;
+  }
+  
+  .pcw-price-item:hover {
+    background: #f3f4f6;
+    transform: translateX(-2px);
+  }
+  
+  .pcw-price-item.best-price {
+    border-color: #10b981;
+    background: #ecfdf5;
+  }
+  
+  .pcw-price-item.unavailable {
+    opacity: 0.5;
+  }
+  
+  .pcw-site {
+    font-weight: 600;
+    color: #374151;
+    min-width: 70px;
+  }
+  
+  .pcw-amount {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    flex: 1;
+    text-align: center;
+  }
+  
+  .pcw-badge {
+    background: #10b981;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  
+  .pcw-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+  
+  .pcw-link:hover {
+    color: #764ba2;
+  }
+  
+  .unavailable-text {
+    color: #9ca3af;
+    font-size: 12px;
+    font-style: italic;
+  }
+  
+  .pcw-scam-section {
+    margin-top: 20px;
+    border-top: 2px solid #e5e7eb;
+    padding-top: 20px;
+  }
+  
+  .pcw-scam-header {
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    margin-bottom: 12px;
+  }
+  
+  .pcw-scam-icon {
+    font-size: 24px;
+  }
+  
+  .pcw-scam-title {
+    flex: 1;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+  
+  .pcw-scam-score {
+    font-weight: 700;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 12px;
+    border-radius: 12px;
+  }
+  
+  .pcw-recommendation {
+    background: #f9fafb;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    color: #374151;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .pcw-flags {
+    background: #fef2f2;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+  
+  .pcw-flags strong {
+    color: #991b1b;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .pcw-flags ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #7f1d1d;
+  }
+  
+  .pcw-flags li {
+    margin-bottom: 4px;
+    line-height: 1.5;
+  }
+  
+  .pcw-all-clear {
+    background: #f0fdf4;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #166534;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .pcw-content::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .pcw-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .pcw-content::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+  }
+  
+  .pcw-content::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+  
+  @media (max-width: 768px) {
+    #price-comparison-widget {
+      width: calc(100% - 40px);
+      bottom: 10px;
+      right: 10px;
+      left: 10px;
+    }
+  }
